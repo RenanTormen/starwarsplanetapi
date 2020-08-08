@@ -16,7 +16,7 @@ import org.flywaydb.core.api.MigrationInfo;
 @Singleton
 public class DatabaseUtil {
 
-    @Resource(lookup = "jdbc/h2")
+    @Resource(name = "java:app/h2")
     private DataSource dataSource;
 
     private final Logger LOGGER = Logger.getLogger(DatabaseUtil.class.getName());

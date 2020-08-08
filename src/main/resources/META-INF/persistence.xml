@@ -6,7 +6,7 @@
 	<!-- Define Persistence Unit -->
 	<persistence-unit name="ApiPU" transaction-type="JTA">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-		<jta-data-source>jdbc/h2</jta-data-source>
+		<jta-data-source>java:app/h2</jta-data-source>
 		<exclude-unlisted-classes>false</exclude-unlisted-classes>
 		
 	</persistence-unit>
