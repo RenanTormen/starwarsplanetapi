@@ -8,6 +8,8 @@ Projeto criado pelo Maven, e testado no servidor de aplicação Payara (versão 
 
 Utiliza o banco de dados H2 Integrado, com EclipseLink de PersistenceProvider, banco de dados este podendo ser facilmente configurado pelo persistence.xml e apontado para um banco externo.
 
+Para testes de integração com a camada de dados, foi utilizado banco de dados H2 e Weld para CDI.
+
 No projeto também foi incluso Flyway para versionamento de scripts/banco de dados.
 
 Foram utilizados testes unitários com Weld e Mockito, para testar o Resource.
