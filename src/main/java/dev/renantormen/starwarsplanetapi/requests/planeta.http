@@ -1,0 +1,45 @@
+@host = http://localhost
+@port = 8080
+@aplicacao = starwarsplanetapi-1.0-SNAPSHOT
+@versao = api/v1
+@resource = planetas
+@id = 1 
+@nome = Tatooine
+
+GET {{host}}:{{port}}/{{aplicacao}}/{{versao}}/{{resource}}/swapi HTTP/1.1
+
+### Chamada para listar todos:
+GET {{host}}:{{port}}/{{aplicacao}}/{{versao}}/{{resource}} HTTP/1.1
+
+### Listar por ID
+GET {{host}}:{{port}}/{{aplicacao}}/{{versao}}/{{resource}}/{{id}} HTTP/1.1
+
+### Listar por nome
+GET {{host}}:{{port}}/{{aplicacao}}/{{versao}}/{{resource}}/nome/{{nome}} HTTP/1.1
+
+### Alterar
+PUT {{host}}:{{port}}/{{aplicacao}}/{{versao}}/{{resource}}/{{id}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "id" : "1",
+  "clima":"arid",
+  "nome":"Tatooines",
+  "terreno":"desert"
+}
+
+
+### Inserir
+POST {{host}}:{{port}}/{{aplicacao}}/{{versao}}/{{resource}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "clima":"arid",
+  "nome":"Tatooine",
+  "terreno":"desert"
+}
+
+### Deletar
+DELETE  {{host}}:{{port}}/{{aplicacao}}/{{versao}}/{{resource}}/{{id}} HTTP/1.1
+
+###

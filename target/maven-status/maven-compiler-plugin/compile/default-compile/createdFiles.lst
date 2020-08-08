@@ -1,0 +1,15 @@
+dev\renantormen\starwarsplanetapi\client\StarWarsAPIClient.class
+dev\renantormen\starwarsplanetapi\services\PlanetaService.class
+dev\renantormen\starwarsplanetapi\utils\StringUtil.class
+dev\renantormen\starwarsplanetapi\DAO\GenericDAO.class
+dev\renantormen\starwarsplanetapi\dto\PlanetaDTO.class
+dev\renantormen\starwarsplanetapi\entities\Planeta.class
+dev\renantormen\starwarsplanetapi\JAXRSConfiguration.class
+dev\renantormen\starwarsplanetapi\DAO\PlanetaDAO.class
+dev\renantormen\starwarsplanetapi\dto\PlanetSwapiDTO.class
+dev\renantormen\starwarsplanetapi\enums\EnumPathResources.class
+dev\renantormen\starwarsplanetapi\utils\DatabaseUtil.class
+dev\renantormen\starwarsplanetapi\utils\DTOConverter.class
+dev\renantormen\starwarsplanetapi\resources\PlanetResource.class
+dev\renantormen\starwarsplanetapi\dto\DTOGenerico.class
+dev\renantormen\starwarsplanetapi\services\SwAPIService.class
