@@ -41,9 +41,10 @@ public class PlanetaService {
         return DTOConverter.toDTO(PlanetaDTO.class, planeta);
     }
 
-    public PlanetaDTO retornarPlanetaPorNome(String nome) {
-        Planeta planeta = planetaDAO.localizarPorNome(nome);
-        return DTOConverter.toDTO(PlanetaDTO.class, planeta);
+    public List<PlanetaDTO> retornarPlanetaPorNome(String nome) {
+        List<PlanetaDTO> resultados = new ArrayList<>();
+        planetaDAO.localizarPorNome(nome).forEach(planeta -> resultados.add(DTOConverter.toDTO(PlanetaDTO.class, planeta)));
+        return resultados;
     }
 
     public List<PlanetaDTO> listarPlanetas() {
