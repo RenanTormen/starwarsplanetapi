@@ -1,1 +1,5 @@
-c:\Projetos\Java\StarWarsPlanetAPI\starwarsplanetapi\src\test\java\dev\renantormen\starwarsplanetapi\PlanetaResourceTest.java
+c:\Projetos\Java\StarWarsPlanetAPI\starwarsplanetapi\src\test\java\dev\renantormen\starwarsplanetapi\mocks\PlanetaDTOMock.java
+c:\Projetos\Java\StarWarsPlanetAPI\starwarsplanetapi\src\test\java\dev\renantormen\starwarsplanetapi\utils\EntityManagerFactoryParaTestes.java
+c:\Projetos\Java\StarWarsPlanetAPI\starwarsplanetapi\src\test\java\dev\renantormen\starwarsplanetapi\PlanetaServiceTest.java
+c:\Projetos\Java\StarWarsPlanetAPI\starwarsplanetapi\src\test\java\dev\renantormen\starwarsplanetapi\PlanetaResourceComServiceMockTest.java
+c:\Projetos\Java\StarWarsPlanetAPI\starwarsplanetapi\src\test\java\dev\renantormen\starwarsplanetapi\PlanetaResourceTestComPersistencia.java

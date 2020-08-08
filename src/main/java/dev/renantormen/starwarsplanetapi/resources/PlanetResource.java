@@ -40,7 +40,7 @@ public class PlanetResource {
     public Response listarTodos() {
         try {
             List<PlanetaDTO> listPlanetas = planetaService.listarPlanetas();
-            if (Objects.isNull(listPlanetas)) {
+            if (listPlanetas.isEmpty()) {
                 return Response.noContent().build();
             }
             return Response.ok(listPlanetas).build();
@@ -69,11 +69,11 @@ public class PlanetResource {
     @Path("/nome/{nome}")
     public Response buscarPorNome(@PathParam("nome") String nome) {
         try {
-            PlanetaDTO planeta = planetaService.retornarPlanetaPorNome(nome);
-            if (Objects.isNull(planeta)) {
+            List<PlanetaDTO> planetas = planetaService.retornarPlanetaPorNome(nome);
+            if (planetas.isEmpty()) {
                 return Response.noContent().build();
             }
-            return Response.ok(planeta).build();
+            return Response.ok(planetas).build();
         } catch (Exception e) {
             LOGGER.log(Level.WARNING, "Houve um erro na busca por nome ", e);
             return Response.serverError().build();

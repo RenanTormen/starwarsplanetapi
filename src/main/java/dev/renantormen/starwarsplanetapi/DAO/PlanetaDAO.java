@@ -1,10 +1,8 @@
 package dev.renantormen.starwarsplanetapi.DAO;
 
 import java.util.List;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.persistence.NoResultException;
 import javax.persistence.TypedQuery;
 
 import dev.renantormen.starwarsplanetapi.entities.Planeta;
@@ -18,20 +16,13 @@ public class PlanetaDAO extends GenericDAO<Planeta, Long> {
         return query.getResultList();
     }
 
-    public Planeta localizarPorNome(String nome) {
-        try {
+    public List<Planeta> localizarPorNome(String nome) {
             StringBuilder sb = new StringBuilder();
             sb.append("SELECT p FROM Planeta p ");
-            sb.append("WHERE p.nome LIKE :nome ");
+            sb.append("WHERE p.nome = :nome ");
             TypedQuery<Planeta> typedQuery = getEntityManager().createQuery(sb.toString(), Planeta.class);
             typedQuery.setParameter("nome", nome);
-            return typedQuery.getSingleResult();    
-        } catch (NoResultException e) {
-            return null;
-        } catch (Exception e){
-            LOGGER.log(Level.SEVERE, "Houve um erro ao executar a busca", e);
-        }
-        return null;
+            return typedQuery.getResultList();    
     } 
 
 }
