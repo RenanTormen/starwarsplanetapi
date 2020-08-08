@@ -22,6 +22,8 @@ A geração do jar ficará disponível através da fase Install do maven, exempl
 mvn clean install
 ```
 
+Após execução, é possível encontrar o jar na pasta /target na raiz do projeto.
+
 Utiliza o banco de dados H2 Integrado, com EclipseLink de PersistenceProvider, banco de dados este podendo ser facilmente configurado pelo persistence.xml e apontado para um banco externo.
 
 No caso de utilização do uberjar para execução, o banco de dados também deve ser configurado no arquivo webapp/WEB-INF/web.xml
